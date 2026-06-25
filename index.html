@@ -26,12 +26,16 @@ box-sizing:border-box;
 html{
 scroll-behavior:smooth;
 }
-body{
-font-family:"Noto Sans JP",sans-serif;
-background:white;
-color:#444;
-line-height:1.8;
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #444;
+  line-height: 1.8;
+  background-image: url("bg-nature.png"); 
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed; 
 }
+
 /*==================
 Header
 ==================*/
@@ -147,21 +151,15 @@ class="side-menu">
 /*==================
 Hero
 ==================*/
-.hero{
-min-height:100vh;
-overflow:hidden;
-box-sizing:border-box;
-
-background-image:
-linear-gradient(
-rgba(255,255,255,.35),
-rgba(255,255,255,.45)
-),
-url("bg-nature.png");
-background-position:center bottom;
-background-repeat:no-repeat;
-background-position:center 70%;
-display:flex;
+.hero {
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.45)
+  );
+  display: flex;
 align-items:center;
 justify-content:center;
 text-align:center;

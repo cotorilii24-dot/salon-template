@@ -1,0 +1,1028 @@
+<!-- =========================
+ Salon Matryoshka v1.0
+ Header
+========================= -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>
+Salon Matryoshka
+</title>
+<meta
+name="description"
+content="癒し・学び・創作が出会う場所">
+<link
+href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+html{
+scroll-behavior:smooth;
+}
+body{
+font-family:"Noto Sans JP",sans-serif;
+background:#f7f7f2;
+color:#444;
+line-height:1.8;
+}
+/*==================
+Header
+==================*/
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(255,255,255,.88);
+backdrop-filter:blur(10px);
+box-shadow:0 2px 12px rgba(0,0,0,.08);
+z-index:999;
+}
+.header-inner{
+max-width:1200px;
+margin:auto;
+padding:18px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+font-size:1.4rem;
+font-weight:700;
+color:#6d8975;
+letter-spacing:1px;
+}
+.menu-btn{
+font-size:2rem;
+border:none;
+background:none;
+cursor:pointer;
+color:#6d8975;
+}
+/*==================
+Side Menu
+==================*/
+#overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.35);
+display:none;
+z-index:998;
+}
+#overlay.active{
+display:block;
+}
+.side-menu{
+position:fixed;
+top:0;
+right:-300px;
+width:280px;
+height:100%;
+background:#ffffff;
+box-shadow:-3px 0 15px rgba(0,0,0,.12);
+transition:.35s;
+z-index:999;
+padding-top:90px;
+}
+.side-menu.active{
+right:0;
+}
+.side-menu a{
+display:block;
+padding:20px 35px;
+text-decoration:none;
+font-size:1rem;
+color:#555;
+transition:.2s;
+}
+.side-menu a:hover{
+background:#eef3ee;
+color:#6d8975;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<div class="logo">
+Salon Matryoshka
+</div>
+<button
+class="menu-btn"
+onclick="toggleMenu()">
+☰
+</button>
+</div>
+</header>
+<div
+id="overlay"
+onclick="toggleMenu()">
+</div>
+<nav
+id="sideMenu"
+class="side-menu">
+<a href="#top" onclick="toggleMenu()">HOME</a>
+<a href="#massage" onclick="toggleMenu()">マッサージ</a>
+<a href="#cooking" onclick="toggleMenu()">料理教室</a>
+<a href="#workshop" onclick="toggleMenu()">ワークショップ</a>
+<a href="#profile" onclick="toggleMenu()">店主紹介</a>
+<a href="#access" onclick="toggleMenu()">アクセス</a>
+<a href="#contact" onclick="toggleMenu()">お問い合わせ</a>
+</nav>
+
+<!-- =========================
+ Top Hero
+========================= -->
+<style>
+/*==================
+Hero
+==================*/
+.hero{
+height:100vh;
+background-image:
+linear-gradient(
+rgba(255,255,255,.35),
+rgba(255,255,255,.45)
+),
+url("https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:30px;
+}
+.hero-inner{
+max-width:800px;
+animation:fadeUp 1.5s;
+}
+.hero h1{
+font-size:3rem;
+color:#557460;
+margin-bottom:15px;
+font-weight:700;
+}
+.hero p{
+font-size:1.2rem;
+color:#444;
+margin-bottom:35px;
+}
+.hero-btn{
+display:inline-block;
+padding:15px 35px;
+background:#6d8975;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
+font-weight:bold;
+}
+.hero-btn:hover{
+background:#567060;
+transform:translateY(-3px);
+}
+.scroll{
+margin-top:60px;
+font-size:.9rem;
+color:#666;
+animation:float 2s infinite;
+}
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(10px);
+}
+100%{
+transform:translateY(0);
+}
+}
+</style>
+<section
+class="hero"
+id="top">
+<div class="hero-inner">
+<h1>
+Salon Matryoshka
+</h1>
+<p>
+癒し・学び・創作が出会う場所。<br>
+マッサージ、料理教室、ハンドメイドを通して、
+毎日が少し豊かになる時間をご提供します。
+</p>
+<a
+href="#massage"
+class="hero-btn">
+詳しく見る
+</a>
+<div class="scroll">
+↓
+SCROLL
+</div>
+</div>
+</section>
+
+<!-- =========================
+ Massage Section
+========================= -->
+<style>
+/*==================
+Section 共通
+==================*/
+.section{
+padding:100px 25px;
+background:#f7f7f2;
+}
+.container{
+max-width:1100px;
+margin:auto;
+}
+.section-title{
+text-align:center;
+font-size:2.2rem;
+color:#6d8975;
+margin-bottom:20px;
+}
+.section-sub{
+text-align:center;
+color:#777;
+margin-bottom:60px;
+}
+/*==================
+Card
+==================*/
+.service-card{
+background:#ffffff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+}
+.service-image{
+min-height:420px;
+background-image:url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=80");
+background-size:cover;
+background-position:center;
+}
+.service-content{
+padding:60px;
+}
+.service-content h3{
+font-size:2rem;
+color:#6d8975;
+margin-bottom:20px;
+}
+.service-content p{
+margin-bottom:18px;
+color:#555;
+}
+.price-box{
+background:#eef4ef;
+padding:20px;
+border-radius:15px;
+margin-top:30px;
+}
+.price-box h4{
+margin-bottom:15px;
+color:#557460;
+}
+.price{
+display:flex;
+justify-content:space-between;
+padding:12px 0;
+border-bottom:1px solid #d9e2d9;
+}
+.price:last-child{
+border:none;
+}
+.reserve-btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+background:#6d8975;
+color:#fff;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
+.reserve-btn:hover{
+background:#567060;
+transform:translateY(-3px);
+}
+/*==================
+Responsive
+==================*/
+@media(max-width:850px){
+.service-card{
+grid-template-columns:1fr;
+}
+.service-image{
+height:280px;
+}
+.service-content{
+padding:35px;
+}
+}
+</style>
+<section
+id="massage"
+class="section">
+<div class="container">
+<h2 class="section-title">
+Relaxation Massage
+</h2>
+<p class="section-sub">
+アロマの香りに包まれながら、
+心と身体をゆっくり整える癒しの時間。
+</p>
+<div class="service-card">
+<div class="service-image">
+</div>
+<div class="service-content">
+<h3>
+マッサージ
+</h3>
+<p>
+日々の疲れやストレスを、
+ゆったりとした空間で優しくほぐします。
+</p>
+<p>
+天然アロマの香りに包まれながら、
+心まで軽くなるようなリラクゼーションを
+お楽しみください。
+</p>
+<div class="price-box">
+<h4>
+料金
+</h4>
+<div class="price">
+<span>
+30分コース
+</span>
+<span>
+¥3,000
+</span>
+</div>
+<div class="price">
+<span>
+60分コース
+</span>
+<span>
+¥5,000
+</span>
+</div>
+</div>
+<a
+href="#contact"
+class="reserve-btn">
+ご予約はこちら
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- =========================
+ Cooking Section
+========================= -->
+<style>
+.cooking-section{
+padding:100px 25px;
+background:#ffffff;
+}
+.cooking-card{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+background:#fdfdfb;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.cooking-image{
+min-height:420px;
+background-image:url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80");
+background-size:cover;
+background-position:center;
+}
+.cooking-content{
+padding:60px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+.cooking-content h2{
+font-size:2rem;
+color:#6d8975;
+margin-bottom:20px;
+}
+.cooking-content p{
+margin-bottom:18px;
+color:#555;
+line-height:1.9;
+}
+.lesson-box{
+margin-top:30px;
+padding:20px;
+background:#eef4ef;
+border-radius:15px;
+}
+.lesson-box h4{
+margin-bottom:15px;
+color:#557460;
+}
+.lesson-row{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #d8e3d9;
+}
+.lesson-row:last-child{
+border:none;
+}
+.lesson-btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+background:#6d8975;
+color:white;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
+.lesson-btn:hover{
+background:#567060;
+transform:translateY(-3px);
+}
+@media(max-width:850px){
+.cooking-card{
+grid-template-columns:1fr;
+}
+.cooking-image{
+height:280px;
+}
+.cooking-content{
+padding:35px;
+}
+}
+</style>
+<section
+id="cooking"
+class="cooking-section">
+<div class="cooking-card">
+<div class="cooking-image">
+</div>
+<div class="cooking-content">
+<h2>
+料理教室
+</h2>
+<p>
+毎週◯曜日・◯曜日
+11:00〜14:30開催。
+</p>
+<p>
+和食の基本から、
+海外で人気のスイーツまで。
+少人数制なので、
+初めての方でも安心してご参加いただけます。
+</p>
+<p>
+「料理って楽しい」
+そんな時間を一緒に過ごしましょう。
+</p>
+<div class="lesson-box">
+<h4>
+レッスン内容
+</h4>
+<div class="lesson-row">
+<span>
+開催時間
+</span>
+<span>
+11:00〜14:30
+</span>
+</div>
+<div class="lesson-row">
+<span>
+参加費
+</span>
+<span>
+¥2,500
+</span>
+</div>
+<div class="lesson-row">
+<span>
+定員
+</span>
+<span>
+4〜6名
+</span>
+</div>
+</div>
+<a
+href="#contact"
+class="lesson-btn">
+参加予約はこちら
+</a>
+</div>
+</div>
+</section>
+
+<!-- =========================
+ Workshop Section
+========================= -->
+<style>
+.workshop-section{
+padding:100px 25px;
+background:#f7f7f2;
+}
+.workshop-container{
+max-width:1100px;
+margin:auto;
+}
+.workshop-title{
+text-align:center;
+font-size:2.2rem;
+color:#6d8975;
+margin-bottom:20px;
+}
+.workshop-sub{
+text-align:center;
+color:#666;
+margin-bottom:60px;
+}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-bottom:50px;
+}
+.gallery-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+.gallery-card:hover{
+transform:translateY(-8px);
+}
+.gallery-image{
+height:240px;
+background-size:cover;
+background-position:center;
+}
+.img1{
+background-image:url("https://images.unsplash.com/photo-1513475382585-d06e58bcb0ff?auto=format&fit=crop&w=1200&q=80");
+}
+.img2{
+background-image:url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80");
+}
+.img3{
+background-image:url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80");
+}
+.gallery-content{
+padding:25px;
+}
+.gallery-content h3{
+margin-bottom:12px;
+color:#6d8975;
+}
+.gallery-content p{
+color:#555;
+font-size:.95rem;
+line-height:1.8;
+}
+.workshop-text{
+max-width:750px;
+margin:50px auto 0;
+text-align:center;
+line-height:2;
+color:#555;
+}
+.workshop-btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+background:#6d8975;
+color:white;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
+.workshop-btn:hover{
+background:#567060;
+transform:translateY(-3px);
+}
+</style>
+<section
+id="workshop"
+class="workshop-section">
+<div class="workshop-container">
+<h2 class="workshop-title">
+Handmade Workshop
+</h2>
+<p class="workshop-sub">
+布やハギレを使い、
+世界に一つだけの作品づくりを楽しみませんか？
+</p>
+<div class="gallery">
+<div class="gallery-card">
+<div class="gallery-image img1"></div>
+<div class="gallery-content">
+<h3>
+ポーチ作り
+</h3>
+<p>
+初めての方でも楽しく作れる、
+人気のハンドメイド作品です。
+</p>
+</div>
+</div>
+<div class="gallery-card">
+<div class="gallery-image img2"></div>
+<div class="gallery-content">
+<h3>
+布小物制作
+</h3>
+<p>
+ハギレを活かしながら、
+暮らしに寄り添う作品を作ります。
+</p>
+</div>
+</div>
+<div class="gallery-card">
+<div class="gallery-image img3"></div>
+<div class="gallery-content">
+<h3>
+アイデア作品
+</h3>
+<p>
+参加者同士でアイデアを出し合い、
+新しい作品づくりに挑戦します。
+</p>
+</div>
+</div>
+</div>
+<div class="workshop-text">
+<p>
+使わなくなった布やハギレにも、
+新しい命を吹き込めます。
+</p>
+<p>
+「作る楽しさ」
+「完成した喜び」
+を皆さまと共有できる、
+そんなワークショップを目指しています。
+</p>
+<a
+href="#contact"
+class="workshop-btn">
+参加してみる
+</a>
+</div>
+</div>
+</section>
+
+<!-- =========================
+ Profile Section
+========================= -->
+<style>
+.profile-section{
+padding:100px 25px;
+background:#ffffff;
+}
+.profile-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:320px 1fr;
+gap:50px;
+align-items:center;
+}
+.profile-image{
+width:320px;
+height:320px;
+border-radius:50%;
+background-image:url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80");
+background-size:cover;
+background-position:center;
+margin:auto;
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+.profile-text h2{
+font-size:2rem;
+color:#6d8975;
+margin-bottom:20px;
+}
+.profile-text h3{
+margin-bottom:25px;
+font-weight:500;
+color:#777;
+}
+.profile-text p{
+margin-bottom:18px;
+line-height:2;
+color:#555;
+}
+.message{
+margin-top:30px;
+padding:25px;
+background:#eef4ef;
+border-left:5px solid #6d8975;
+border-radius:12px;
+font-style:italic;
+}
+@media(max-width:850px){
+.profile-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+.profile-image{
+width:240px;
+height:240px;
+}
+}
+</style>
+<section
+id="profile"
+class="profile-section">
+<div class="profile-container">
+<div class="profile-image">
+</div>
+<div class="profile-text">
+<h2>
+店主紹介
+</h2>
+<h3>
+タマコ（仮）
+</h3>
+<p>
+日々忙しく過ごす皆さまが、
+少しだけ肩の力を抜ける場所を作りたい。
+そんな想いから
+Salon Matryoshkaを始めました。
+</p>
+<p>
+マッサージ、
+料理教室、
+ハンドメイドワークショップ。
+どれも「人とのつながり」を
+大切にしています。
+</p>
+<div class="message">
+「ここへ来るとホッとする。」
+そんな場所であり続けられるよう、
+心を込めてお迎えいたします。
+</div>
+</div>
+</div>
+</section>
+
+<!-- =========================
+ Access & Contact
+========================= -->
+<style>
+.access-section{
+padding:100px 25px;
+background:#f7f7f2;
+}
+.access-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+.info-card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.info-card h2{
+color:#6d8975;
+margin-bottom:25px;
+}
+.info-row{
+margin-bottom:18px;
+line-height:1.9;
+}
+.contact-btn{
+display:block;
+margin-top:18px;
+padding:15px;
+text-align:center;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.3s;
+}
+.instagram{
+background:#E1306C;
+color:white;
+}
+.line{
+background:#06C755;
+color:white;
+}
+.mail{
+background:#6d8975;
+color:white;
+}
+.contact-btn:hover{
+opacity:.85;
+transform:translateY(-3px);
+}
+.map{
+width:100%;
+height:350px;
+border-radius:20px;
+background:#e7ece7;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#888;
+font-size:1rem;
+text-align:center;
+padding:20px;
+}
+footer{
+background:#6d8975;
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:80px;
+}
+footer p{
+margin:10px 0;
+}
+@media(max-width:850px){
+.access-container{
+grid-template-columns:1fr;
+}
+}
+</style>
+<section
+id="access"
+class="access-section">
+<div class="access-container">
+<div class="info-card">
+<h2>
+アクセス
+</h2>
+<div class="info-row">
+📍 三重県〇〇市
+</div>
+<div class="info-row">
+🕒 営業時間
+10:00〜18:00
+</div>
+<div class="info-row">
+🌿 定休日
+火曜日
+</div>
+<div class="info-row">
+📞 TEL
+000-0000-0000
+</div>
+<div class="info-row">
+📧 Mail
+sample@example.com
+</div>
+<a
+href="#"
+class="contact-btn instagram">
+Instagramはこちら
+</a>
+<a
+href="#"
+class="contact-btn line">
+LINEで予約
+</a>
+<a
+href="mailto:sample@example.com"
+class="contact-btn mail">
+メールで問い合わせ
+</a>
+</div>
+<div class="map">
+ここにGoogleマップを埋め込みます。<br><br>
+Googleマップの共有<br>
+↓
+「地図を埋め込む」<br>
+↓
+iframeを貼り付ければ完成✨
+</div>
+</div>
+</section>
+<footer id="contact">
+<h2>
+Salon Matryoshka
+</h2>
+<p>
+癒し・学び・創作が出会う場所
+</p>
+<p>
+Instagram・LINEよりお気軽にお問い合わせください。
+</p>
+<p>
+© 2026 Salon Matryoshka
+</p>
+</footer>
+
+<!-- =========================
+ JavaScript
+========================= -->
+<script>
+/*=========================
+ ハンバーガーメニュー
+=========================*/
+const menu=document.getElementById("sideMenu");
+const overlay=document.getElementById("overlay");
+function toggleMenu(){
+menu.classList.toggle("active");
+overlay.classList.toggle("active");
+}
+/*=========================
+ メニューを押したら閉じる
+=========================*/
+document.querySelectorAll(".side-menu a").forEach(link=>{
+link.addEventListener("click",()=>{
+menu.classList.remove("active");
+overlay.classList.remove("active");
+});
+});
+/*=========================
+ Escキーでも閉じる
+=========================*/
+document.addEventListener("keydown",function(e){
+if(e.key==="Escape"){
+menu.classList.remove("active");
+overlay.classList.remove("active");
+}
+});
+/*=========================
+ スクロールアニメーション
+=========================*/
+const targets=document.querySelectorAll(
+".service-card,.cooking-card,.gallery-card,.profile-container,.info-card"
+);
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.animate([
+{
+opacity:0,
+transform:"translateY(40px)"
+},
+{
+opacity:1,
+transform:"translateY(0)"
+}
+],{
+duration:900,
+fill:"forwards",
+easing:"ease"
+});
+observer.unobserve(entry.target);
+}
+});
+});
+targets.forEach(target=>{
+target.style.opacity="0";
+observer.observe(target);
+});
+</script>
+</body>
+</html>
+<!-- =========================
+  Salon Matryoshka Template
+  Version 1.0
+  Designed with tak
+========================= -->

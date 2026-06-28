@@ -559,154 +559,171 @@ class="lesson-btn">
  Workshop Section
 ========================= -->
 <style>
-.workshop-section {
-  padding: 100px 25px;
-  background: rgba(247, 247, 242, 0.85);
+.workshop-section{
+  padding:100px 25px;
+  /* 背景を透かして全体を綺麗に見せるための半透明設定 */
+  background: rgba(247, 247, 242, 0.85); 
 }
 .workshop-container{
-max-width:1100px;
-margin:auto;
+  max-width:1100px;
+  margin:auto;
 }
 .workshop-title{
-text-align:center;
-font-size:2.2rem;
-color:#6d8975;
-margin-bottom:20px;
+  text-align:center;
+  font-size:2.2rem;
+  color:#6d8975;
+  margin-bottom:20px;
 }
 .workshop-sub{
-text-align:center;
-color:#666;
-margin-bottom:60px;
+  text-align:center;
+  color:#666;
+  margin-bottom:60px;
 }
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-bottom:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-bottom:50px;
 }
 .gallery-card{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
 }
 .gallery-card:hover{
-transform:translateY(-8px);
+  transform:translateY(-8px);
 }
+
+/* ＝画像を入れる箱の設定＝ */
 .gallery-image{
-height:240px;
-background-size:cover;
-background-position:center;
+  height:240px;
+  width: 100%;
+  background-size:cover;
+  background-position:center;
+  /* 万が一画像が読み込めなかった時に分かりやすいよう、薄いグレーを敷いておきます */
+  background-color: #e2e8e4; 
 }
+
+/* ＝＝＝ ここが画像の指定です ＝＝＝ */
 .img1{
-background-image:url("https://images.unsplash.com/photo-1513475382585-d06e58bcb0ff?auto=format&fit=crop&w=1200&q=80");
+  /* ポーチの画像（HTMLファイルと同じフォルダに置いてください） */
+  background-image:url("porch.png");
 }
 .img2{
-background-image:url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80");
+  background-image:url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80");
 }
 .img3{
-background-image:url("porch.png");
+  background-image:url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80");
 }
+
 .gallery-content{
-padding:25px;
+  padding:25px;
 }
 .gallery-content h3{
-margin-bottom:12px;
-color:#6d8975;
+  margin-bottom:12px;
+  color:#6d8975;
 }
 .gallery-content p{
-color:#555;
-font-size:.95rem;
-line-height:1.8;
+  color:#555;
+  font-size:.95rem;
+  line-height:1.8;
 }
 .workshop-text{
-max-width:750px;
-margin:50px auto 0;
-text-align:center;
-line-height:2;
-color:#555;
+  max-width:750px;
+  margin:50px auto 0;
+  text-align:center;
+  line-height:2;
+  color:#555;
 }
 .workshop-btn{
-display:inline-block;
-margin-top:35px;
-padding:15px 35px;
-background:#6d8975;
-color:white;
-text-decoration:none;
-border-radius:40px;
-transition:.3s;
+  display:inline-block;
+  margin-top:35px;
+  padding:15px 35px;
+  background:#6d8975;
+  color:white;
+  text-decoration:none;
+  border-radius:40px;
+  transition:.3s;
 }
 .workshop-btn:hover{
-background:#567060;
-transform:translateY(-3px);
+  background:#567060;
+  transform:translateY(-3px);
 }
 </style>
-<section
-id="workshop"
-class="workshop-section">
-<div class="workshop-container">
-<h2 class="workshop-title">
-Handmade Workshop
-</h2>
-<p class="workshop-sub">
-布やハギレを使い、
-世界に一つだけの作品づくりを楽しみませんか？
-</p>
-<div class="gallery">
-<div class="gallery-card">
-<div class="gallery-image img1"></div>
-<div class="gallery-content">
-<h3>
-ポーチ作り
-</h3>
-<p>
-初めての方でも楽しく作れる、
-人気のハンドメイド作品です。
-</p>
-</div>
-</div>
-<div class="gallery-card">
-<div class="gallery-image img2"></div>
-<div class="gallery-content">
-<h3>
-布小物制作
-</h3>
-<p>
-ハギレを活かしながら、
-暮らしに寄り添う作品を作ります。
-</p>
-</div>
-</div>
-<div class="gallery-content">
-<h3>
-アイデア作品
-</h3>
-<p>
-参加者同士でアイデアを出し合い、
-新しい作品づくりに挑戦します。
-</p>
-</div>
-</div>
-</div>
-<div class="workshop-text">
-<p>
-使わなくなった布やハギレにも、
-新しい命を吹き込めます。
-</p>
-<p>
-「作る楽しさ」
-「完成した喜び」
-を皆さまと共有できる、
-そんなワークショップを目指しています。
-</p>
-<a
-href="#contact"
-class="workshop-btn">
-参加してみる
-</a>
-</div>
-</div>
+
+<section id="workshop" class="workshop-section">
+  <div class="workshop-container">
+    <h2 class="workshop-title">
+      Handmade Workshop
+    </h2>
+    <p class="workshop-sub">
+      布やハギレを使い、
+      世界に一つだけの作品づくりを楽しみませんか？
+    </p>
+    <div class="gallery">
+      
+      <!-- カード1（ポーチ作り） -->
+      <div class="gallery-card">
+        <div class="gallery-image img1"></div>
+        <div class="gallery-content">
+          <h3>
+            ポーチ作り
+          </h3>
+          <p>
+            初めての方でも楽しく作れる、
+            人気のハンドメイド作品です。
+          </p>
+        </div>
+      </div>
+      
+      <!-- カード2（布小物制作） -->
+      <div class="gallery-card">
+        <div class="gallery-image img2"></div>
+        <div class="gallery-content">
+          <h3>
+            布小物制作
+          </h3>
+          <p>
+            ハギレを活かしながら、
+            暮らしに寄り添う作品を作ります。
+          </p>
+        </div>
+      </div>
+      
+      <!-- カード3（アイデア作品） -->
+      <div class="gallery-card">
+        <div class="gallery-image img3"></div>
+        <div class="gallery-content">
+          <h3>
+            アイデア作品
+          </h3>
+          <p>
+            参加者同士でアイデアを出し合い、
+            新しい作品づくりに挑戦します。
+          </p>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="workshop-text">
+      <p>
+        使わなくなった布やハギレにも、
+        新しい命を吹き込めます。
+      </p>
+      <p>
+        「作る楽しさ」
+        「完成した喜び」
+        を皆さまと共有できる、
+        そんなワークショップを目指しています。
+      </p>
+      <a href="#contact" class="workshop-btn">
+        参加してみる
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- =========================
